@@ -1,0 +1,144 @@
+html {
+    height: 100%;
+   -webkit-moz-o-background:  radial-gradient(circle, #202020, #ccc);
+}
+#container{
+    height: 600px;
+    width: 750px;
+    background-color: #069feb;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-moz-o-ms-box-shadow: 4px 4px 0px 0px #009DE4;
+    position: relative;
+
+}
+#score{
+    background-color: #92ffd2;
+    color: #888E5F;
+    padding:11px;
+    position: absolute;
+    left: 700px;
+    box-shadow: 0px 4px 0px #198a2c;
+}
+
+#correct{
+    position: absolute;
+    left: 260px;
+    background-color:#42E252;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+#wrong{
+    position: absolute;
+    left: 250px;
+    background-color:#DE401A;
+    padding: 11px;
+    display: none;
+}
+#fruitsContainer{
+    width: 650px;
+    height: 300px;
+    margin: 50px auto 10px auto;
+    background-color: white;
+    -webkit-moz-o-ms-box-shadow: 0px 4px #535AA8;
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    color: black;
+    position: relative;
+    overflow:hidden;
+}
+#instruction{
+    width: 450px;
+    height: 50px;
+    background-color:#a772cc;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 50px;
+    -webkit-moz-ms-o-box-shadow: 0px 4px #8153A8;
+    font-size: 20px;   
+}
+
+#choice {
+    width: 450px;
+    height: 100px;
+    margin: 5px auto;
+
+}
+.box{
+    width:85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right:36px;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-ms-o-moz-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    -webkit-moz-o-ms-transition: all 0.2s;
+
+}
+.box:hover, #startreset:hover{
+    background-color:#9C89F6;
+    color: white;
+    -webkit-moz-o-ms-box-shadow: 0px 4px #6B54D3;
+}
+#box4{
+    margin-right: 0;
+}
+.box:active, #startreset:active{
+ -webkit-moz-ms-o-box-shadow: 0px 0px #6b54d3;
+ top:4px;
+}
+
+#startreset{
+    width:85px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin:0 auto;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-ms-o-moz-box-shadow: 0px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    -webkit-moz-o-ms-transition: all 0.2s;
+}
+#trialsLeft{
+    width:80px;
+    padding: 10px;
+    position: absolute;
+    
+    background-color: #F1FF92;
+    border-radius: 3px;
+    -wekit-moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    /* visibility: hidden; */
+     display: none; 
+}
+#gameover{
+    height: 200px;
+    width: 500px;
+   background: -webkit-linear-gradient(#F3CA6B, #F3706C);
+    position: absolute;
+    top: 130px;
+    left: 145px;
+    color: white;
+    font-size:2.5em;
+    text-align:center;
+    text-transform: uppercase;
+    z-index:2;
+    display:none;
+}
+
+.life{
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+.fruit{
+    display: none;
+    position: absolute;
+}
