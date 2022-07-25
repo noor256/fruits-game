@@ -18,6 +18,10 @@ const Vote  = (props) => {
   )
 }
 
+const AnecdoteTitle=({title}) => <h1>{title}</h1>
+const ResultTitle = ({title}) => <h1>{title}</h1>
+
+
 const App = () =>{
   const anecdotes = [
     'If it hurts, do it more often.',
@@ -35,6 +39,7 @@ const App = () =>{
 
 
 
+const AnecdotesQuotes = ({quote}) => <h3>{quote}</h3>
 
    const nextAnecdote =()=> {
     const selected = Math.floor(Math.random() * anecdotes.length);
@@ -47,13 +52,21 @@ const voteAnecdote = () => {
   const copy = [...votes];
   copy[selected] += 1;
   setVotes(copy);
-};
+}
+
+
+const maxVote = Math.max(...votes);
+const champion = anecdotes[votes.indexOf(maxVote)]
   return(
     <div>
-
-      <h1>{anecdotes[selected]} has {votes[selected]}</h1>
+      <AnecdoteTitle title="Anecdotes of the day"/>
+      <AnecdotesQuotes quote={anecdotes[selected]} />
+      <h3>has {votes[selected]}</h3>
       <Vote onClick={voteAnecdote}/>
       <Button onClick={nextAnecdote}/>
+      <ResultTitle title="Anecdotes with the most votes:"/>
+      <AnecdotesQuotes quote={champion}/>
+      <h3>has {maxVote}</h3>
       
     </div>
   )
